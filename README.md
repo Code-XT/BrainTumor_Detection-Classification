@@ -122,10 +122,4 @@ Some ideas for improving this project include:
 - Improving the model's accuracy with a larger dataset.
 - Deploying the application on a cloud platform.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
 **NeuraScan** - Enhancing brain tumor diagnosis through machine learning.
