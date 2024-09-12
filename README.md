@@ -1,7 +1,7 @@
 # NeuraScan - Brain Tumor Detection App
 
-![Brain Tumor Detection](<img src="https://media.istockphoto.com/id/1250205787/photo/brain-tumor.jpg?s=612x612&w=0&k=20&c=iu9lulr9RpYsFA2r8NqdEAzxxewm4jNNaH4hV3IAY-0=" alt="Brain Tumor Detection" width="200" />
-)
+![Brain Tumor Detection]<img src="https://media.istockphoto.com/id/1250205787/photo/brain-tumor.jpg?s=612x612&w=0&k=20&c=iu9lulr9RpYsFA2r8NqdEAzxxewm4jNNaH4hV3IAY-0=" alt="Brain Tumor Detection" width="200" />
+
 
 ## Overview
 
