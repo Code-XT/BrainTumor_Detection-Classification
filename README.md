@@ -1,3 +1,7 @@
+Here's a revised version of your project documentation with added sections for model accuracy graph, loss graph, and confusion matrix:
+
+---
+
 # NeuraScan - Brain Tumor Detection App
 
 ![Brain Tumor Detection](https://media.istockphoto.com/id/1250205787/photo/brain-tumor.jpg?s=612x612&w=0&k=20&c=iu9lulr9RpYsFA2r8NqdEAzxxewm4jNNaH4hV3IAY-0=)
@@ -12,6 +16,11 @@
 - **Accurate Predictions**: The app leverages a trained machine learning model to classify brain tumors.
 - **Recommendations**: Provides tailored next steps and recommendations based on the prediction result.
 - **Tumor Information**: Offers detailed information about different types of brain tumors.
+
+![image](https://github.com/user-attachments/assets/bef721ee-eb24-4cd2-8825-573b7c1cd0aa)
+![image](https://github.com/user-attachments/assets/b172230b-55a5-4b6f-9ab5-06295567ad7b)
+
+
 
 ## Technologies Used
 
@@ -113,6 +122,23 @@ The app classifies brain MRI scans into four categories:
 - **Meningioma**: Typically benign tumors arising from the meninges.
 - **Pituitary Tumor**: Benign tumors near the pituitary gland.
 - **No Tumor**: Indicates no detectable brain tumor in the MRI scan.
+
+## Model Performance Metrics
+
+### Accuracy Graph
+
+![Model Accuracy](![image](https://github.com/user-attachments/assets/8b574e70-43df-4f39-ba32-bea32ebd5a15)
+)
+
+### Loss Graph
+
+![Loss Graph](![image](https://github.com/user-attachments/assets/3198ff1e-7fee-48f5-91d6-5c8bda6940bd)
+)
+
+### Confusion Matrix
+
+![Confusion Matrix](![image](https://github.com/user-attachments/assets/e873a0ce-a922-4b72-9667-3f605eedec44)
+)
 
 ## Future Improvements
 
