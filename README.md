@@ -1,7 +1,3 @@
-Here's a revised version of your project documentation with added sections for model accuracy graph, loss graph, and confusion matrix:
-
----
-
 # NeuraScan - Brain Tumor Detection App
 
 ![Brain Tumor Detection](https://media.istockphoto.com/id/1250205787/photo/brain-tumor.jpg?s=612x612&w=0&k=20&c=iu9lulr9RpYsFA2r8NqdEAzxxewm4jNNaH4hV3IAY-0=)
