@@ -128,5 +128,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-**Brain Tumor Detection App** - Enhancing brain tumor diagnosis through machine learning.
-```
+**NeuraScan** - Enhancing brain tumor diagnosis through machine learning.
