@@ -1,10 +1,10 @@
-# Brain Tumor Detection App
+# NeuraScan - Brain Tumor Detection App
 
-![Brain Tumor Detection](https://via.placeholder.com/1200x300.png?text=Brain+Tumor+Detection+App)
+![Brain Tumor Detection](https://media.istockphoto.com/id/1250205787/photo/brain-tumor.jpg?s=612x612&w=0&k=20&c=iu9lulr9RpYsFA2r8NqdEAzxxewm4jNNaH4hV3IAY-0=)
 
 ## Overview
 
-The **Brain Tumor Detection App** is a machine learning-based web application designed to detect and classify brain tumors from MRI scans. This project utilizes a deep learning model that predicts the type of tumor, such as **Glioma**, **Meningioma**, **Pituitary Tumor**, or **No Tumor**, with a high degree of accuracy. The application provides valuable recommendations based on the analysis, making it an essential tool for early detection and medical consultation.
+**NeuraScan** is a machine learning-based web application designed to detect and classify brain tumors from MRI scans. This project utilizes a deep learning model that predicts the type of tumor, such as **Glioma**, **Meningioma**, **Pituitary Tumor**, or **No Tumor**, with a high degree of accuracy. The application provides valuable recommendations based on the analysis, making it an essential tool for early detection and medical consultation.
 
 ## Features
 
@@ -20,12 +20,6 @@ The **Brain Tumor Detection App** is a machine learning-based web application de
 - **Machine Learning**: Trained deep learning model (TensorFlow/Keras)
 - **File Handling**: Uploads MRI scans in various formats (JPEG, PNG)
 - **Deployment**: Works locally or can be deployed to any cloud provider (Heroku, AWS, etc.)
-
-## Demo
-
-You can try the live demo of the project by visiting: [Live Demo](#)
-
-> **Note**: Replace this link with your actual deployed app link once available.
 
 ## Installation and Setup
 
@@ -66,7 +60,7 @@ To set up the project locally, follow these steps:
 
 4. **Download the Trained Model**
 
-   You need to place the trained deep learning model in the `model` directory. If you haven't trained a model yet, you can use a pre-trained one (optional). For this project, make sure the model file is named `tumor_model.h5` and placed in the `model` directory.
+   You need to place the trained deep learning model in the `root` directory. If you haven't trained a model yet, you can use a pre-trained one (optional). For this project, make sure the model file is named `brain_tumor_detection_model.keras` and placed in the `root` directory.
 
 5. **Set Up Flask Environment Variables**
 
@@ -98,7 +92,7 @@ To set up the project locally, follow these steps:
 brain-tumor-detection/
 ├── app.py               # Main Flask application file
 ├── model/               # Directory containing the trained model
-│   └── tumor_model.h5    # Pre-trained model for prediction
+│   └── brain_tumor_detection_model.keras    # Pre-trained model for prediction
 ├── static/              # Static files (CSS, JS, Images)
 ├── templates/           # HTML templates for Flask views
 │   ├── index.html        # Homepage for file upload
@@ -136,12 +130,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 **Brain Tumor Detection App** - Enhancing brain tumor diagnosis through machine learning.
 ```
-
-### Key Sections in the README:
-- **Project Overview**: Provides a high-level understanding of the app's purpose and functionality.
-- **Technologies Used**: Lists the technologies and frameworks involved in building the app.
-- **Installation and Setup**: Step-by-step guide on how to install dependencies, set up the app, and run it locally.
-- **Directory Structure**: Explains the project's organization, making it easier for contributors to navigate.
-- **Running the Model**: A brief description of how the app uses the trained model for predictions.
-- **Future Improvements**: Suggested features for future development.
-- **License**: Indicates the project is open-source and licensed under MIT.
