@@ -123,18 +123,18 @@ The app classifies brain MRI scans into four categories:
 
 ### Accuracy Graph
 
-![Model Accuracy](![image](https://github.com/user-attachments/assets/8b574e70-43df-4f39-ba32-bea32ebd5a15)
-)
+![Model Accuracy](https://github.com/user-attachments/assets/8b574e70-43df-4f39-ba32-bea32ebd5a15)
+
 
 ### Loss Graph
 
-![Loss Graph](![image](https://github.com/user-attachments/assets/3198ff1e-7fee-48f5-91d6-5c8bda6940bd)
-)
+![Loss Graph](https://github.com/user-attachments/assets/3198ff1e-7fee-48f5-91d6-5c8bda6940bd)
+
 
 ### Confusion Matrix
 
-![Confusion Matrix](![image](https://github.com/user-attachments/assets/e873a0ce-a922-4b72-9667-3f605eedec44)
-)
+![Confusion Matrix](https://github.com/user-attachments/assets/e873a0ce-a922-4b72-9667-3f605eedec44)
+
 
 ## Future Improvements
 
