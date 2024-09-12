@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuraScan - Analysis Result</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+      .navbar {
+        background-color: #0056b3;
+      }
+      .navbar-brand {
+        font-weight: bold;
+        color: #fff !important;
+      }
+      .hero {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: #fff;
+        padding: 60px 0;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      .result-section {
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      .result-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .confidence-bar {
+        height: 30px;
+        background-color: #e9ecef;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      .confidence-progress {
+        height: 100%;
+        background-color: #28a745;
+        transition: width 0.6s ease;
+      }
+      .info-card {
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        height: 100%;
+        transition: transform 0.3s ease;
+      }
+      .info-card:hover {
+        transform: translateY(-5px);
+      }
+      .info-card i {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 30px 0;
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">NeuraScan</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://github.com/Code-XT"
+                target="_blank"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="container text-center">
+        <h1>Analysis Result</h1>
+        <p class="lead">
+          Your MRI scan has been processed by our advanced AI system.
+        </p>
+      </div>
+    </section>
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="result-section">
+            <h2 class="text-center mb-4">Detected: {{ prediction }}</h2>
+            <div class="row align-items-center">
+              <div class="col-md-6">
+                <img
+                  src="{{ url_for('static', filename='uploads/' + image_file) }}"
+                  alt="Uploaded MRI Image"
+                  class="result-image mb-3"
+                />
+              </div>
+              <div class="col-md-6">
+                <h3>Confidence: {{ confidence }}%</h3>
+                <div class="confidence-bar mt-2 mb-4">
+                  <div
+                    class="confidence-progress"
+                    style="width: {{ confidence }}%"
+                  ></div>
+                </div>
+                <p>
+                  Our AI model has analyzed your MRI scan with {{ confidence }}%
+                  confidence. Please note that this result should be confirmed
+                  by a medical professional.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-center mb-4">Next Steps & Recommendations</h2>
+          <div class="info-card">
+            <h3>
+              Based on the diagnosis of <strong>{{ prediction }}</strong>:
+            </h3>
+            <ul class="list-unstyled">
+              {% if prediction == "Glioma" %}
+              <li>
+                <i class="fas fa-user-md text-primary"></i> Consult a
+                neuro-oncologist immediately for further assessment.
+              </li>
+              <li>
+                <i class="fas fa-procedures text-warning"></i> Discuss treatment
+                options like surgery, radiation, or chemotherapy.
+              </li>
+              <li>
+                <i class="fas fa-calendar-alt text-info"></i> Schedule
+                additional imaging tests for a comprehensive evaluation.
+              </li>
+              <li>
+                <i class="fas fa-users text-success"></i> Consider joining a
+                support group for glioma patients and their families.
+              </li>
+              {% elif prediction == "Meningioma" %}
+              <li>
+                <i class="fas fa-user-md text-primary"></i> Consult with a
+                neurosurgeon to determine if monitoring or surgery is required.
+              </li>
+              <li>
+                <i class="fas fa-calendar-check text-info"></i> Schedule regular
+                MRI scans for ongoing observation.
+              </li>
+              <li>
+                <i class="fas fa-brain text-warning"></i> Discuss potential
+                symptoms and what to watch for with your doctor.
+              </li>
+              <li>
+                <i class="fas fa-book-medical text-success"></i> Learn about
+                different types of meningiomas and their typical growth
+                patterns.
+              </li>
+              {% elif prediction == "Pituitary" %}
+              <li>
+                <i class="fas fa-user-md text-primary"></i> Consult with an
+                endocrinologist to assess potential hormonal effects.
+              </li>
+              <li>
+                <i class="fas fa-vial text-info"></i> Undergo comprehensive
+                hormonal testing.
+              </li>
+              <li>
+                <i class="fas fa-pills text-warning"></i> Discuss medication
+                options or the necessity of surgery based on tumor size and
+                hormonal impact.
+              </li>
+              <li>
+                <i class="fas fa-eye text-success"></i> Schedule an
+                ophthalmological exam to check for any vision changes.
+              </li>
+              {% else %}
+              <li>
+                <i class="fas fa-check-circle text-success"></i> No tumor
+                detected in this scan.
+              </li>
+              <li>
+                <i class="fas fa-user-md text-primary"></i> If you're
+                experiencing symptoms, consult with your primary care physician.
+              </li>
+              <li>
+                <i class="fas fa-calendar-alt text-info"></i> Consider
+                scheduling follow-up scans as recommended by your doctor.
+              </li>
+              <li>
+                <i class="fas fa-heartbeat text-warning"></i> Focus on
+                maintaining overall health through diet, exercise, and stress
+                management.
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="/" class="btn btn-primary btn-lg">Analyze Another MRI</a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container text-center">
+        <p>
+          &copy; 2024 NeuraScan - Advanced Brain Tumor Detection | Providing
+          expert guidance based on your MRI analysis.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
